@@ -31,12 +31,13 @@ Installation
    - Download the ChromeDriver from [here](https://sites.google.com/a/chromium.org/chromedriver/downloads) matching your Chrome version.
    - Unzip the downloaded file.
    - Move it to a directory included in your system’s `PATH`, for example:
-     bash
+ 
      sudo mv chromedriver /usr/local/bin/
      ```
 
 Project Structure
 
+(sane--> automation--> keywords.robot/paths.py/testcases.robot)
 - path.py: Stores all the XPaths and URLs.
 - keywords.robot: Contains keywords (similar to functions in PyTest) used for automation.
 - testcases.robot: Contains test cases and imports the keyword file.
@@ -47,12 +48,12 @@ Usage
 Running the Tests
 
 1. Activate the virtual environment if not already activated:
-   bash
+   
    source venv/bin/activate
 
 
 2. Run the test cases:
-   bash
+
    robot testcases.robot
    
 

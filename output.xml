@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.4 on darwin)" generated="2024-07-27T17:53:48.203562" rpa="false" schemaversion="5">
+<suite id="s1" name="Testcases" source="/Users/saneshvk/Desktop/assessment/sane/automation/testcases.robot">
+<kw name="Set Screenshot Directory" owner="Screenshot" type="SETUP">
+<arg>sane/automation/screenshots</arg>
+<doc>Sets the directory where screenshots are saved.</doc>
+<status status="PASS" start="2024-07-27T17:53:48.296632" elapsed="0.000607"/>
+</kw>
+<test id="s1-t1" name="chcheckout_page_field_test_key_TC" line="24">
+<kw name="launch_setup" owner="keywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-07-27T17:53:48.298234" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<arg>${null}</arg>
+<arg>${browsername}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-07-27T17:53:48.298070" elapsed="2.051423"/>
+</kw>
+<arg>chrome</arg>
+<status status="PASS" start="2024-07-27T17:53:48.297730" elapsed="2.052134"/>
+</kw>
+<kw name="checkout_page_field_test_key" owner="keywords">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-07-27T17:53:50.351576" level="INFO">Opening url 'https://woocommerce-850415-2933260.cloudwaysapps.com/product/cap'</msg>
+<arg>${cap_prooduct_page_url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-07-27T17:53:50.351436" elapsed="1.259735"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${addtocart}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-27T17:53:51.611439" elapsed="0.016891"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-27T17:53:51.628781" level="INFO">Clicking element '(//*[@type='submit'])[3]'.</msg>
+<arg>${addtocart}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-27T17:53:51.628552" elapsed="1.197876"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-07-27T17:53:52.826761" level="INFO">Opening url 'https://woocommerce-850415-2933260.cloudwaysapps.com/checkout'</msg>
+<arg>${checkout_page_url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-07-27T17:53:52.826613" elapsed="0.920392"/>
+</kw>
+<status status="PASS" start="2024-07-27T17:53:50.351003" elapsed="3.396133"/>
+</kw>
+<kw name="filling the fields" owner="keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${firstname_field}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-27T17:53:53.747725" elapsed="0.021901"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-27T17:53:53.769993" level="INFO">Typing text 'Fname' into text field '//*[@id='billing_first_name']'.</msg>
+<arg>${firstname_field}</arg>
+<arg>Fname</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-27T17:53:53.769801" elapsed="0.103974"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-07-27T17:53:54.878869" level="INFO">Slept 1 second.</msg>
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-07-27T17:53:53.874041" elapsed="1.005410"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-27T17:53:54.880628" level="INFO">Typing text 'Lname' into text field '//*[@id='billing_last_name']'.</msg>
+<arg>${lastname_field}</arg>
+<arg>Lname</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-27T17:53:54.880018" elapsed="0.060750"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-07-27T17:53:54.941269" level="INFO">Executing JavaScript:
+window.scrollBy(0,500)
+Without any arguments.</msg>
+<arg>window.scrollBy(0,500)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-07-27T17:53:54.940964" elapsed="0.003995"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${country_dropdown}</arg>
+<arg>timeout=10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-27T17:53:54.945113" elapsed="0.010181"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-27T17:53:54.955644" level="INFO">Clicking element '(//*[@aria-label='Country / Region'])[1]'.</msg>
+<arg>${country_dropdown}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-27T17:53:54.955468" elapsed="0.046080"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-27T17:53:55.002050" level="INFO">Typing text 'india' into text field '(//*[@aria-owns='select2-billing_country-results'])[2]'.</msg>
+<arg>${country_searchfield}</arg>
+<arg>india</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-27T17:53:55.001817" elapsed="0.046500"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-27T17:53:55.048652" level="INFO">Clicking element '(//*[text()='India'])[3]'.</msg>
+<arg>${india}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-27T17:53:55.048488" elapsed="0.051395"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-27T17:53:55.100231" level="INFO">Typing text '123 abc' into text field '//*[@id='billing_address_1']'.</msg>
+<arg>${street_address}</arg>
+<arg>123 abc</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-27T17:53:55.100055" elapsed="0.052699"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-27T17:53:55.153121" level="INFO">Typing text 'Calicut' into text field '//*[@id='billing_city']'.</msg>
+<arg>${city}</arg>
+<arg>Calicut</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-27T17:53:55.152942" elapsed="0.041249"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-27T17:53:55.194523" level="INFO">Clicking element '(//*[@aria-label='State / County'])[1]'.</msg>
+<arg>${state_dropdown}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-27T17:53:55.194363" elapsed="0.025239"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-27T17:53:55.219939" level="INFO">Typing text 'Kerala' into text field '(//*[@aria-owns='select2-billing_state-results'])[2]'.</msg>
+<arg>${state_searchfield}</arg>
+<arg>Kerala</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-27T17:53:55.219771" elapsed="0.045155"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${kerala}</arg>
+<arg>timeout=10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-27T17:53:55.265097" elapsed="0.009962"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-27T17:53:55.275377" level="INFO">Clicking element '(//*[text()='Kerala'])[2]'.</msg>
+<arg>${kerala}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-27T17:53:55.275226" elapsed="0.021493"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-27T17:53:55.297049" level="INFO">Typing text '673016' into text field '//*[@id='billing_postcode']'.</msg>
+<arg>${pincode_field}</arg>
+<arg>673016</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-27T17:53:55.296885" elapsed="0.038212"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-27T17:53:55.335454" level="INFO">Typing text '9876543210' into text field '//*[@type='tel']'.</msg>
+<arg>${phone_no_field}</arg>
+<arg>9876543210</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-27T17:53:55.335265" elapsed="0.049612"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-27T17:53:55.385373" level="INFO">Typing text 'abcd@demo.com' into text field '//*[@id='billing_email']'.</msg>
+<arg>${email_field}</arg>
+<arg>abcd@demo.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-27T17:53:55.385186" elapsed="0.043066"/>
+</kw>
+<status status="PASS" start="2024-07-27T17:53:53.747461" elapsed="1.680915"/>
+</kw>
+<kw name="validating total price" owner="keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${total_price}</arg>
+<arg>timeout=10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-27T17:53:55.428905" elapsed="0.009522"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-07-27T17:53:55.450436" level="INFO">${total_price_without_delivery} = $16.00</msg>
+<var>${total_price_without_delivery}</var>
+<arg>${total_price}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-27T17:53:55.438599" elapsed="0.011943"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-27T17:53:55.450811" level="INFO">Clicking element '//*[@value='yes']'.</msg>
+<arg>${delivery_yes_radio}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-27T17:53:55.450666" elapsed="0.026831"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-07-27T17:53:59.478517" level="INFO">Slept 4 seconds.</msg>
+<arg>4</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-07-27T17:53:55.477664" elapsed="4.001381"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${total_price}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-27T17:53:59.479477" elapsed="0.019208"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-07-27T17:53:59.512451" level="INFO">${total_price_with_delivery} = $21.00</msg>
+<var>${total_price_with_delivery}</var>
+<arg>${total_price}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-27T17:53:59.499103" elapsed="0.013468"/>
+</kw>
+<kw name="Remove String" owner="String">
+<msg time="2024-07-27T17:53:59.512941" level="INFO">${withoutdelivery_total_as_integer} = 16.00</msg>
+<var>${withoutdelivery_total_as_integer}</var>
+<arg>${total_price_without_delivery}</arg>
+<arg>$</arg>
+<doc>Removes all ``removables`` from the given ``string``.</doc>
+<status status="PASS" start="2024-07-27T17:53:59.512761" elapsed="0.000239"/>
+</kw>
+<kw name="Remove String" owner="String">
+<msg time="2024-07-27T17:53:59.513226" level="INFO">${withdelivery_total_as_integer} = 21.00</msg>
+<var>${withdelivery_total_as_integer}</var>
+<arg>${total_price_with_delivery}</arg>
+<arg>$</arg>
+<doc>Removes all ``removables`` from the given ``string``.</doc>
+<status status="PASS" start="2024-07-27T17:53:59.513097" elapsed="0.000181"/>
+</kw>
+<kw name="Should Not Be Equal" owner="BuiltIn">
+<arg>${withoutdelivery_total_as_integer}</arg>
+<arg>${withdelivery_total_as_integer}</arg>
+<doc>Fails if the given objects are equal.</doc>
+<status status="PASS" start="2024-07-27T17:53:59.513372" elapsed="0.000165"/>
+</kw>
+<status status="PASS" start="2024-07-27T17:53:55.428680" elapsed="4.084930"/>
+</kw>
+<kw name="placing the order" owner="keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-27T17:53:59.514450" level="INFO">Clicking element '//*[@id='date_delivery']'.</msg>
+<arg>${date_box}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-27T17:53:59.514201" elapsed="0.038510"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${calendar}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-27T17:53:59.552880" elapsed="0.009881"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-27T17:53:59.563087" level="INFO">Clicking element '//*[text()='28']'.</msg>
+<arg>${a_date}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-27T17:53:59.562925" elapsed="0.030786"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-27T17:53:59.594121" level="INFO">Clicking element '//*[@id='time_delivery']'.</msg>
+<arg>${time_box}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-27T17:53:59.593889" elapsed="0.033377"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${time}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-27T17:53:59.627495" elapsed="0.017973"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-27T17:53:59.645822" level="INFO">Clicking element '//li[text()='12:00 AM']'.</msg>
+<arg>${time}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-27T17:53:59.645650" elapsed="0.035314"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-27T17:53:59.681432" level="INFO">Clicking element '//*[@id='packaging_wooden']'.</msg>
+<arg>${wooden_packing}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-27T17:53:59.681212" elapsed="0.031580"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-27T17:53:59.713159" level="INFO">Clicking element '//*[@id='place_order']'.</msg>
+<arg>${placeorder_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-27T17:53:59.712988" elapsed="0.046660"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-07-27T17:54:09.761216" level="INFO">Slept 10 seconds.</msg>
+<arg>10</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-07-27T17:53:59.759821" elapsed="10.002656"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-07-27T17:54:09.786029" level="INFO">Element '//*[@class='woocommerce-order-details']' is displayed.</msg>
+<arg>${order_details}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-27T17:54:09.763432" elapsed="0.022826"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-07-27T17:54:09.806608" level="INFO">${necessary_fields} = Order details
+PRODUCT TOTAL
+Cap × 1 $16.00
+SUBTOTAL: $16.00
+SHIPPING: Flat Rate
+DO YOU WANT THE PRODUCT TO BE DELIVERED? (YES): $5.00
+PAYMENT METHOD: Direct Bank Transfer
+TOTAL: $21.00
+BILLING DETAILS...</msg>
+<var>${necessary_fields}</var>
+<arg>${order_details}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-27T17:54:09.786472" elapsed="0.020259"/>
+</kw>
+<kw name="Should Not Be Empty" owner="BuiltIn">
+<msg time="2024-07-27T17:54:09.807013" level="INFO">Length is 346.</msg>
+<arg>${necessary_fields}</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<status status="PASS" start="2024-07-27T17:54:09.806867" elapsed="0.000219"/>
+</kw>
+<kw name="login_test_key" owner="keywords">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-07-27T17:54:09.807488" level="INFO">Opening url 'https://woocommerce-850415-2933260.cloudwaysapps.com/my-account'</msg>
+<arg>${myaccount_url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-07-27T17:54:09.807390" elapsed="0.392591"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${username_field}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-27T17:54:10.200250" elapsed="0.012903"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-27T17:54:10.213627" level="INFO">Typing text 'test_customer' into text field '//*[@name='username']'.</msg>
+<arg>${username_field}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-27T17:54:10.213412" elapsed="0.037944"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-27T17:54:10.251699" level="INFO">Typing text 'password' into text field '//*[@name='password']'.</msg>
+<arg>${password_field}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-27T17:54:10.251525" elapsed="0.042054"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-27T17:54:10.293916" level="INFO">Clicking element '//*[@name='login']'.</msg>
+<arg>${login_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-27T17:54:10.293750" elapsed="0.782453"/>
+</kw>
+<arg>test_customer</arg>
+<arg>password</arg>
+<status status="PASS" start="2024-07-27T17:54:09.807201" elapsed="1.269263"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${orders}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-27T17:54:11.076671" elapsed="0.014582"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-27T17:54:11.091731" level="INFO">Clicking element '(//a[@href='https://woocommerce-850415-2933260.cloudwaysapps.com/my-account/orders'])[1]'.</msg>
+<arg>${orders}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-27T17:54:11.091491" elapsed="0.343465"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${view_btn}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-27T17:54:11.435151" elapsed="0.011099"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-27T17:54:11.446594" level="INFO">Clicking element '(//*[@class='woocommerce-button button view'])[1]'.</msg>
+<arg>${view_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-27T17:54:11.446427" elapsed="0.293038"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-07-27T17:54:11.748501" level="INFO">Element '//*[@class='woocommerce-order-details']' is displayed.</msg>
+<arg>${order_details}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-27T17:54:11.739774" elapsed="0.008879"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-07-27T17:54:11.762040" level="INFO">${fields_in_orederdetails} = Order details
+PRODUCT TOTAL
+Cap × 1 $16.00
+SUBTOTAL: $16.00
+SHIPPING: Flat Rate
+DO YOU WANT THE PRODUCT TO BE DELIVERED? (YES): $5.00
+PAYMENT METHOD: Cash On Delivery
+TOTAL: $21.00
+BILLING DETAILS
+Do ...</msg>
+<var>${fields_in_orederdetails}</var>
+<arg>${order_details}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-27T17:54:11.748806" elapsed="0.013354"/>
+</kw>
+<status status="PASS" start="2024-07-27T17:53:59.513948" elapsed="12.248298"/>
+</kw>
+<status status="PASS" start="2024-07-27T17:53:48.297386" elapsed="23.465171"/>
+</test>
+<status status="PASS" start="2024-07-27T17:53:48.205446" elapsed="23.557700"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Testcases">Testcases</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-07-27T17:53:48.216139" level="WARN">Error in file '/Users/saneshvk/Desktop/assessment/sane/automation/keywords.robot' on line 178: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+</errors>
+</robot>

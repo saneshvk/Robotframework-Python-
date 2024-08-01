@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.4 on win32)" generated="2024-08-01T19:18:57.848687" rpa="false" schemaversion="5">
+<suite id="s1" name="Robotframework-Python-" source="C:\Users\Sanesh\assessment\Robotframework-Python-">
+<suite id="s1-s1" name="Sane" source="C:\Users\Sanesh\assessment\Robotframework-Python-\sane">
+<suite id="s1-s1-s1" name="Automation" source="C:\Users\Sanesh\assessment\Robotframework-Python-\sane\automation">
+<suite id="s1-s1-s1-s1" name="Testcases" source="C:\Users\Sanesh\assessment\Robotframework-Python-\sane\automation\testcases.robot">
+<kw name="Set Screenshot Directory" owner="Screenshot" type="SETUP">
+<arg>sane/automation/screenshots</arg>
+<doc>Sets the directory where screenshots are saved.</doc>
+<status status="PASS" start="2024-08-01T19:18:58.107756" elapsed="0.000942"/>
+</kw>
+<test id="s1-s1-s1-s1-t1" name="phone_no_field_validation_TC" line="14">
+<kw name="launch_setup" owner="keywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-08-01T19:18:58.110692" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<arg>${null}</arg>
+<arg>${browsername}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-08-01T19:18:58.109695" elapsed="1.762778"/>
+</kw>
+<arg>chrome</arg>
+<status status="PASS" start="2024-08-01T19:18:58.109695" elapsed="1.763775"/>
+</kw>
+<kw name="enter page url" owner="keywords">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-08-01T19:18:59.874560" level="INFO">Opening url 'https://woocommerce-850415-2933260.cloudwaysapps.com/product/rf-id-card'</msg>
+<arg>${page_url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-08-01T19:18:59.874560" elapsed="1.374121"/>
+</kw>
+<arg>${productpage_url}</arg>
+<status status="PASS" start="2024-08-01T19:18:59.873470" elapsed="1.375211"/>
+</kw>
+<kw name="phone_no_field_validation_test_key" owner="keywords">
+<kw name="product_page_field_test_key" owner="keywords">
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-08-01T19:19:01.249683" elapsed="0.033933"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Variation_color}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-01T19:19:01.283616" elapsed="0.028739"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-01T19:19:01.313352" level="INFO">Clicking element '//*[@title='Red']'.</msg>
+<arg>${Variation_color}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-01T19:19:01.312355" elapsed="0.041863"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-01T19:19:01.355220" level="INFO">Clicking element '(//*[@title='Landscape'])[1]'.</msg>
+<arg>${variation_orientation}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-01T19:19:01.354218" elapsed="0.055364"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-01T19:19:01.409582" level="INFO">Typing text 'Just Do It' into text field '//*[@id='profile_desc']'.</msg>
+<arg>${profile_description}</arg>
+<arg>Just Do It</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-01T19:19:01.409582" elapsed="0.103172"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-08-01T19:19:01.515744" level="INFO">Executing JavaScript:
+window.scrollBy(0, 700)
+Without any arguments.</msg>
+<arg>window.scrollBy(0, 700)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-08-01T19:19:01.513760" elapsed="0.006968"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${phone_no_checkbox}</arg>
+<arg>timeout=10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-01T19:19:01.520728" elapsed="0.021930"/>
+</kw>
+<kw name="Select Checkbox" owner="SeleniumLibrary">
+<msg time="2024-08-01T19:19:01.543650" level="INFO">Selecting checkbox '//*[@id='phone_number_checkbox']'.</msg>
+<arg>${phone_no_checkbox}</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-01T19:19:01.543650" elapsed="0.063309"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-08-01T19:19:02.608174" level="INFO">Slept 1 second.</msg>
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-08-01T19:19:01.606959" elapsed="1.001215"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-01T19:19:02.609235" level="INFO">Typing text 'abcdefgh' into text field '//*[@type='tel']'.</msg>
+<arg>${phone_no_field}</arg>
+<arg>${phonenumber}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-01T19:19:02.608174" elapsed="0.059877"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-08-01T19:19:03.669205" level="INFO">Slept 1 second.</msg>
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-08-01T19:19:02.668051" elapsed="1.001154"/>
+</kw>
+<kw name="Choose File" owner="SeleniumLibrary">
+<msg time="2024-08-01T19:19:03.670221" level="INFO">Sending C:\Users\saneshvk\Desktop\assessment\screenshot_1.jpg to browser.</msg>
+<msg time="2024-08-01T19:19:03.784734" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-08-01T19:19:03.785730" level="FAIL">InvalidArgumentException: Message: invalid argument: File not found : /Users/saneshvk/Desktop/assessment/screenshot_1.jpg
+  (Session info: chrome=127.0.6533.74)
+Stacktrace:
+	GetHandleVerifier [0x00007FF772B49632+30946]
+	(No symbol) [0x00007FF772AFE3C9]
+	(No symbol) [0x00007FF7729F6FDA]
+	(No symbol) [0x00007FF772A4041D]
+	(No symbol) [0x00007FF772A6CA6A]
+	(No symbol) [0x00007FF772A3BBB6]
+	(No symbol) [0x00007FF772A6CC80]
+	(No symbol) [0x00007FF772A8B041]
+	(No symbol) [0x00007FF772A6C813]
+	(No symbol) [0x00007FF772A3A6E5]
+	(No symbol) [0x00007FF772A3B021]
+	GetHandleVerifier [0x00007FF772C7F83D+1301229]
+	GetHandleVerifier [0x00007FF772C8BDB7+1351783]
+	GetHandleVerifier [0x00007FF772C82A03+1313971]
+	GetHandleVerifier [0x00007FF772B7DD06+245686]
+	(No symbol) [0x00007FF772B0758F]
+	(No symbol) [0x00007FF772B03804]
+	(No symbol) [0x00007FF772B03992]
+	(No symbol) [0x00007FF772AFA3EF]
+	BaseThreadInitThunk [0x00007FFEC692257D+29]
+	RtlUserThreadStart [0x00007FFEC7FCAF28+40]
+</msg>
+<arg>${logo}</arg>
+<arg>/Users/saneshvk/Desktop/assessment/screenshot_1.jpg</arg>
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<status status="FAIL" start="2024-08-01T19:19:03.669205" elapsed="0.123317">InvalidArgumentException: Message: invalid argument: File not found : /Users/saneshvk/Desktop/assessment/screenshot_1.jpg
+  (Session info: chrome=127.0.6533.74)
+Stacktrace:
+	GetHandleVerifier [0x00007FF772B49632+30946]
+	(No symbol) [0x00007FF772AFE3C9]
+	(No symbol) [0x00007FF7729F6FDA]
+	(No symbol) [0x00007FF772A4041D]
+	(No symbol) [0x00007FF772A6CA6A]
+	(No symbol) [0x00007FF772A3BBB6]
+	(No symbol) [0x00007FF772A6CC80]
+	(No symbol) [0x00007FF772A8B041]
+	(No symbol) [0x00007FF772A6C813]
+	(No symbol) [0x00007FF772A3A6E5]
+	(No symbol) [0x00007FF772A3B021]
+	GetHandleVerifier [0x00007FF772C7F83D+1301229]
+	GetHandleVerifier [0x00007FF772C8BDB7+1351783]
+	GetHandleVerifier [0x00007FF772C82A03+1313971]
+	GetHandleVerifier [0x00007FF772B7DD06+245686]
+	(No symbol) [0x00007FF772B0758F]
+	(No symbol) [0x00007FF772B03804]
+	(No symbol) [0x00007FF772B03992]
+	(No symbol) [0x00007FF772AFA3EF]
+	BaseThreadInitThunk [0x00007FFEC692257D+29]
+	RtlUserThreadStart [0x00007FFEC7FCAF28+40]
+</status>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2024-08-01T19:19:03.792522" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${border1}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-08-01T19:19:03.793518" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2024-08-01T19:19:03.793518" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${border2}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-08-01T19:19:03.793518" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2024-08-01T19:19:03.793518" elapsed="0.000000"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<arg>window.scrollTo(0, document.body.scrollHeight)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="NOT RUN" start="2024-08-01T19:19:03.793518" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${addtocart}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-08-01T19:19:03.794515" elapsed="0.000000"/>
+</kw>
+<arg>${phone_number}</arg>
+<status status="FAIL" start="2024-08-01T19:19:01.249683" elapsed="2.544832">InvalidArgumentException: Message: invalid argument: File not found : /Users/saneshvk/Desktop/assessment/screenshot_1.jpg
+  (Session info: chrome=127.0.6533.74)
+Stacktrace:
+	GetHandleVerifier [0x00007FF772B49632+30946]
+	(No symbol) [0x00007FF772AFE3C9]
+	(No symbol) [0x00007FF7729F6FDA]
+	(No symbol) [0x00007FF772A4041D]
+	(No symbol) [0x00007FF772A6CA6A]
+	(No symbol) [0x00007FF772A3BBB6]
+	(No symbol) [0x00007FF772A6CC80]
+	(No symbol) [0x00007FF772A8B041]
+	(No symbol) [0x00007FF772A6C813]
+	(No symbol) [0x00007FF772A3A6E5]
+	(No symbol) [0x00007FF772A3B021]
+	GetHandleVerifier [0x00007FF772C7F83D+1301229]
+	GetHandleVerifier [0x00007FF772C8BDB7+1351783]
+	GetHandleVerifier [0x00007FF772C82A03+1313971]
+	GetHandleVerifier [0x00007FF772B7DD06+245686]
+	(No symbol) [0x00007FF772B0758F]
+	(No symbol) [0x00007FF772B03804]
+	(No symbol) [0x00007FF772B03992]
+	(No symbol) [0x00007FF772AFA3EF]
+	BaseThreadInitThunk [0x00007FFEC692257D+29]
+	RtlUserThreadStart [0x00007FFEC7FCAF28+40]
+</status>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<var>${alert_message}</var>
+<arg>${inavlid_phone_alert}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-08-01T19:19:03.794515" elapsed="0.000000"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<arg>${inavlid_phone_alert}</arg>
+<arg>${alert_message}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="NOT RUN" start="2024-08-01T19:19:03.794515" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${alert_message}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2024-08-01T19:19:03.794515" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>${alert_message}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2024-08-01T19:19:03.795511" elapsed="0.000000"/>
+</kw>
+<arg>abcdefgh</arg>
+<status status="FAIL" start="2024-08-01T19:19:01.248681" elapsed="2.546830">InvalidArgumentException: Message: invalid argument: File not found : /Users/saneshvk/Desktop/assessment/screenshot_1.jpg
+  (Session info: chrome=127.0.6533.74)
+Stacktrace:
+	GetHandleVerifier [0x00007FF772B49632+30946]
+	(No symbol) [0x00007FF772AFE3C9]
+	(No symbol) [0x00007FF7729F6FDA]
+	(No symbol) [0x00007FF772A4041D]
+	(No symbol) [0x00007FF772A6CA6A]
+	(No symbol) [0x00007FF772A3BBB6]
+	(No symbol) [0x00007FF772A6CC80]
+	(No symbol) [0x00007FF772A8B041]
+	(No symbol) [0x00007FF772A6C813]
+	(No symbol) [0x00007FF772A3A6E5]
+	(No symbol) [0x00007FF772A3B021]
+	GetHandleVerifier [0x00007FF772C7F83D+1301229]
+	GetHandleVerifier [0x00007FF772C8BDB7+1351783]
+	GetHandleVerifier [0x00007FF772C82A03+1313971]
+	GetHandleVerifier [0x00007FF772B7DD06+245686]
+	(No symbol) [0x00007FF772B0758F]
+	(No symbol) [0x00007FF772B03804]
+	(No symbol) [0x00007FF772B03992]
+	(No symbol) [0x00007FF772AFA3EF]
+	BaseThreadInitThunk [0x00007FFEC692257D+29]
+	RtlUserThreadStart [0x00007FFEC7FCAF28+40]
+</status>
+</kw>
+<status status="FAIL" start="2024-08-01T19:18:58.108698" elapsed="5.686813">InvalidArgumentException: Message: invalid argument: File not found : /Users/saneshvk/Desktop/assessment/screenshot_1.jpg
+  (Session info: chrome=127.0.6533.74)
+Stacktrace:
+	GetHandleVerifier [0x00007FF772B49632+30946]
+	(No symbol) [0x00007FF772AFE3C9]
+	(No symbol) [0x00007FF7729F6FDA]
+	(No symbol) [0x00007FF772A4041D]
+	(No symbol) [0x00007FF772A6CA6A]
+	(No symbol) [0x00007FF772A3BBB6]
+	(No symbol) [0x00007FF772A6CC80]
+	(No symbol) [0x00007FF772A8B041]
+	(No symbol) [0x00007FF772A6C813]
+	(No symbol) [0x00007FF772A3A6E5]
+	(No symbol) [0x00007FF772A3B021]
+	GetHandleVerifier [0x00007FF772C7F83D+1301229]
+	GetHandleVerifier [0x00007FF772C8BDB7+1351783]
+	GetHandleVerifier [0x00007FF772C82A03+1313971]
+	GetHandleVerifier [0x00007FF772B7DD06+245686]
+	(No symbol) [0x00007FF772B0758F]
+	(No symbol) [0x00007FF772B03804]
+	(No symbol) [0x00007FF772B03992]
+	(No symbol) [0x00007FF772AFA3EF]
+	BaseThreadInitThunk [0x00007FFEC692257D+29]
+	RtlUserThreadStart [0x00007FFEC7FCAF28+40]
+</status>
+</test>
+<status status="FAIL" start="2024-08-01T19:18:57.878920" elapsed="5.918585"/>
+</suite>
+<status status="FAIL" start="2024-08-01T19:18:57.876935" elapsed="5.922563"/>
+</suite>
+<status status="FAIL" start="2024-08-01T19:18:57.874964" elapsed="5.925532"/>
+</suite>
+<status status="FAIL" start="2024-08-01T19:18:57.857856" elapsed="5.943636"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Robotframework-Python-">Robotframework-Python-</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Sane">Robotframework-Python-.Sane</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1" name="Automation">Robotframework-Python-.Sane.Automation</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1-s1" name="Testcases">Robotframework-Python-.Sane.Automation.Testcases</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-08-01T19:18:57.883909" level="WARN">Error in file 'C:\Users\Sanesh\assessment\Robotframework-Python-\sane\automation\keywords.robot' on line 178: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+</errors>
+</robot>

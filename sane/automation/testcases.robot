@@ -1,5 +1,5 @@
 *** Settings ***
-Resource    /Users/saneshvk/Desktop/assessment/sane/automation/keywords.robot
+Resource   ./keywords.robot
 Test Setup    keywords.launch_setup      chrome
 Suite Setup    Screenshot.Set Screenshot Directory    sane/automation/screenshots
 

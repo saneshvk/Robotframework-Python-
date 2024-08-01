@@ -2,7 +2,7 @@
 Library     SeleniumLibrary
 Library    ../lib/python3.12/site-packages/robot/libraries/Screenshot.py
 Library    ../lib/python3.12/site-packages/robot/libraries/XML.py
-Variables   /Users/saneshvk/Desktop/assessment/sane/automation/paths.py
+Variables   ./paths.py
 Library    DateTime
 Library    ../lib/python3.12/site-packages/robot/libraries/String.py
 
@@ -148,7 +148,7 @@ placing the order
     SeleniumLibrary.Element Should Be Visible    ${order_details}
     ${fields_in_orederdetails}    SeleniumLibrary.Get Text     ${order_details}
 
-
+    
 
     
 
